@@ -170,7 +170,7 @@ function savearry (){
         vazn : VaznInputElem.value , 
         data : Time.value ,
         fiy : FiyInputElem.value ,
-        // NameZamin3 : HederCardAsli.innerHTML
+        
     } 
     if (Index === 0) {
         containerAryy0.push(newBoxobj3)
@@ -184,7 +184,7 @@ function savearry (){
         console.log('reza2');
     }
    
-    //   setLocalsaveData (containerAryy0)
+    
       VaznInputElem.value = ''
       FiyInputElem.value = ''
  } else {
@@ -192,12 +192,6 @@ function savearry (){
  }
 }
 
-// function setLocalsaveData(containerAryy0) {
-//     localStorage.setItem(HederCardAsli.innerHTML, JSON.stringify(containerAryy0));
-    
-    
-    
-//   }
 
 //////////////////دکمه پرکردن////////////////////////////////////////////////////////////
 function PAR() {
