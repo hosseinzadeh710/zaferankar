@@ -1,0 +1,293 @@
+
+:root{
+    --teme-color : #00C853;
+    --teme1-color :  #ab74b4;
+    --teme2-color : #E1BEE7 ;
+    --teme3-color : #da73d1 ;
+    --teme4-color :  #93c277;
+    --teme5-color : #f76d6d ;
+    --teme6-color :#D32F2F;
+    --teme7-color : #decfeb;
+    --teme8-color : #e5ccf6;
+    --teme9-color : #ac88c6;
+    --teme10-color : #e4d6f0;
+
+}
+
+body {
+     background-color:#f1f5fb!important; 
+    /* background-image: url(./img/66-1.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+}
+#nav {
+  background-image: url(./img/IMG_24381-1536x1024.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70px;
+}
+
+.miz{
+    width: 90%;
+    height: 400px;
+    border: 2px solid;
+}
+
+.logo img{
+ /* margin-right: 50px; */
+ align-items: center;
+
+}
+.logo h4{
+ color: #b49db8;
+ 
+}
+
+.nav-link{
+    color: rgb(10, 9, 9) !important;
+    width: fit-content;
+    font-size: 20px;
+}
+.nav-link:hover{
+    color: red!important;
+}
+
+.cardd {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    
+    background-clip: border-box;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 0.25rem;
+}
+
+.btnn{
+    width: 120px;
+    padding: 2px 0 6px 0;
+    border-radius: 25px;
+    border: 1px solid var(--teme2-color);
+   text-align: center;
+}
+
+.btnn:hover{
+    background-color:var(--teme7-color);
+}
+
+.cart input{
+    border-radius: 5px !important;
+    border: 2px solid #E1BEE7 ;
+}
+
+.row {
+    width:400px !important;
+}
+
+.card-header{
+    background-color: rgb(220 201 239 / 48%) !important;
+}
+#card-body2 {
+    height: 310px !important;
+    background-image: url(./img/IMG_2325-1536x1024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-body {
+    background-color: #f1f5fb;
+    /* background-image: url(./img/IMG_2328-1536x1024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.par input{
+    border-radius: 5px !important;
+    border: 2px solid #fdd110 ;
+}
+.kharidar{
+    margin-right: 22px;
+   
+}
+
+.naghdi{
+    margin-right: 11px;
+}
+.ghabz{
+    margin-right: 17px;
+}
+.vazngol {
+    margin-right: 29px;
+}
+.ghimat {
+    margin-right: 11px;
+}
+
+.colaps{
+    height: 190px;
+    width: 100%;
+}
+
+
+#plus {
+    font-size: 20px;
+    padding-bottom: 0 10px 10px 0;
+    cursor: pointer;
+    color: var(--teme6-color) ;
+}
+
+.sabt button {
+    width:70px;
+    font-size: 12px;
+    border-radius: 20px;
+    border: 1px solid var(--teme2-color);
+   text-align: center;
+   padding-bottom: 2px;
+   margin: 0 5px;
+}
+
+#add:hover {
+    background-color: var(--teme4-color) ;
+}
+#clear:hover {
+    background-color: var(--teme5-color) ;
+}
+
+h6{
+     font-size: 15px !important; 
+    margin: 5px !important;
+    padding-top: 2px;
+}
+/* #alert{
+    background: var(--teme8-color);
+
+} */
+
+
+.cart{
+    margin: 5px;
+    /* border: 1px solid; */
+    padding: 5px;
+    border-radius: 5px;
+   display: none;
+   box-shadow: 0px 0px 10px var(--teme9-color);
+  background-color: #f1f5fb;
+  
+}
+
+
+.fa-close{
+    cursor: pointer !important;
+}
+ #bastan:hover{
+    background-color: var(--teme4-color) ;
+ }
+ #jadid:hover{
+    background-color: var(--teme4-color) ;
+ } 
+
+ ::placeholder {
+    font-size: 15px;
+    font-family: sans-serif;
+ }
+/* برا قسمت پرکنی */
+
+.vazn {
+    margin-right: 20px;
+    max-width: 160px;
+}
+
+.adres {
+    margin-right: 8px;
+    max-width: 160px;
+}
+.fiy {
+    margin-right: 5px;
+    max-width: 160px;
+}
+/* ایجاد زمین */
+#add-zamin {
+   height: 50px;
+   padding:10px 15px 0;
+   margin: 0 0 5px 5px; 
+   
+}
+
+#listbar {
+margin-top: 20px;
+}
+
+.btn-info {
+    background-color: white !important;
+    border-color: #ab74b4 !important;
+    
+}
+.btn-info:hover {
+    background-color: var(--teme10-color) !important;
+    outline: none !important;
+}
+
+/* #asly{
+    height: 300px;
+} */
+
+#add-namezamin{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 35px;
+    animation: 1s drop;
+}
+#add-namezamin .card-body{
+    padding: 0 !important;
+}
+#add-namezamin .card-footer{
+    padding: 0 !important;
+}
+
+#listbar .nav-item{
+    width: 200px !important;
+}
+#listbar .nav-item .nav-link{
+    padding-right: 0 !important;
+}
+
+#col-1{
+    width: 315px;
+    position: relative;
+}
+#add-jadid:hover{
+    outline: none !important;
+}
+
+#heder-asli {
+    align-items: center;
+}
+#joziyat {
+    font-size: 16px !important;
+}
+
+@keyframes drop{
+    0%{
+        top: -250px;
+       
+    }
+    100% {
+        top: 50px;
+        
+    }
+}
+/* ////////////////////////////////////////////////////// */
+#table {
+    width: 800px;
+   
+}
+th {
+    text-align: center !important;
+    width: 250px;
+}
+td {
+    text-align: center !important;
+}
