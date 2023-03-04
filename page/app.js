@@ -20,7 +20,7 @@ let cartElemPar = $.querySelector(".par");
 let alertElempar = $.getElementById("alert-par");
 let containerBtnpar = $.querySelector("#sapt-par");
 var VaznInput1 = $.getElementById("hed");
-const BtnsabtData = $ . getElementById ('sabt-btn')
+const BtnsabtData = $.getElementById("sabt-btn");
 
 ///////////////////////////////////////////////////////برای دکمه ایجاد زمین
 const addNewzamin = $.getElementById("add-jadid");
@@ -28,11 +28,11 @@ let NameNewZamin = $.getElementById("add-namezamin");
 const btnTaid = $.getElementById("taid");
 let Olnewzamin = $.getElementById("nav-zamin");
 const BtnClose = $.getElementById("close");
-let Time = $.getElementById ('tarihk')
+let Time = $.getElementById("tarihk");
 
 ////////////////////////////////////////////////////////صفحه جدید
-let VaznInputElem = $.getElementById ('vazn1')
-let FiyInputElem =$.getElementById ('fiy2')
+let VaznInputElem = $.getElementById("vazn1");
+let FiyInputElem = $.getElementById("fiy2");
 //////کد برای ساعت////////////////////////////////////////
 let hoursElem = document.getElementById("hours");
 let minElem = document.getElementById("min");
@@ -124,11 +124,8 @@ function showCart() {
 
       containerBtn.append(newBtnjadid);
 
-      
-
       newBtnforosh.remove();
       newBtnpak.remove();
-
 
       newBtnjadid.addEventListener("click", refersh); ////  مربوط به کلید جدید و خالی کردن اینپوت ها
       function refersh() {
@@ -156,42 +153,147 @@ function showCart() {
     ghabzinput.style.borderColor = "#E1BEE7";
   }
 }
-////////////////////////////////////////////// seve local
+////////////////////////////////////////////// seve indexeDB
+// ///////------------------------------بخش وارایش شده با دیتابیس جدید -------------------
+let ClearDB = $.getElementById("clearDB");
+ClearDB.addEventListener("click", clearDB);
+function clearDB() {
+  let req = indexedDB.deleteDatabase("zafrankar");
+  req.addEventListener("error", (err) => {
+    console.warn("req err deletDB", err);
+  });
+  req.addEventListener("success", (event) => {
+    console.log("req succ deletDB", event);
+  });
+}
+//  -------------------------------------------------پاک کردن نام از خود دیتابس
+let containerAryy = [];
+let dataB = null;
+let ObjectStor = null;
+let AllData =[]
 
-var containerAryy0 = []
-var conn = []
-
-
-function savearry (){
-    
-    
-    if (VaznInputElem.value && FiyInputElem.value ) {
-        let newBoxobj3 ={
-        vazn : VaznInputElem.value , 
-        data : Time.value ,
-        fiy : FiyInputElem.value ,
-        
-    } 
-    if (Index === 0) {
-        containerAryy0.push(newBoxobj3)
-        localStorage.setItem(HederCardAsli.innerHTML, JSON.stringify(containerAryy0));
-        console.log(containerAryy0);
-       
-    }
-    if (Index === 1) {
-        conn.push(newBoxobj3)
-        localStorage.setItem(HederCardAsli.innerHTML, JSON.stringify(conn));
-        console.log('reza2');
-    }
-   
-    
-      VaznInputElem.value = ''
-      FiyInputElem.value = ''
- } else {
-    alert ('همه فیلدها باید پر شوند')
- }
+function TaidZamin() {
+  if (inputAddZamin.value) {
+    INdexedDB();
+  } else {
+    alert("یک نام برای زمین اتخاب کنید");
+  }
 }
 
+function INdexedDB() {
+  let newBoxobj = {
+    id: containerAryy.length + 1,
+    NameZamin: inputAddZamin.value,
+  };
+ if (inputAddZamin.value) {
+  
+   containerAryy.push(newBoxobj);
+ }
+  
+console.log(containerAryy);
+  // -------------------------------------------------
+  let verjen = containerAryy.length + 1;
+ 
+if (containerAryy.length >= 1) {
+
+
+    let DB = indexedDB.open("zafrankar", verjen);
+
+
+  DB.addEventListener("error", (err) => {
+    console.warn(err);
+  });
+  DB.addEventListener("success", (event) => {
+    console.log("open success :" , event);
+    dataB = event.target.result;
+  });
+  DB.addEventListener("upgradeneeded", (event) => {
+    console.log("open upgradeneeded");
+    dataB = event.target.result;
+    if (!dataB.objectStoreNames.contains(newBoxobj.NameZamin)) {
+    
+      objectStore = dataB.createObjectStore(newBoxobj.NameZamin, {
+        keyPath: "userId",
+      });
+    }
+  });
+}
+
+  // -------------------------------------------------
+  setLocalNameZamin(containerAryy);
+  NameNewZamin.style.display = "none";
+}
+
+function savearry() {
+  if (VaznInputElem.value && FiyInputElem.value) {
+    let newBoxobj3 = {
+      userId: Math.floor(Math.random() * 999),
+      vazn: VaznInputElem.value,
+      data: Time.value,
+      fiy: FiyInputElem.value,
+    };
+    let tx = dataB.transaction(result, "readwrite");
+    
+    tx.addEventListener("error", (err) => {
+      console.warn("tx error", err);
+    });
+
+    tx.addEventListener("complete", (event) => {
+      console.log("tx complete", event);
+    });
+
+    let stors = tx.objectStore(result);
+    let reqest = stors.add(newBoxobj3);
+    reqest.addEventListener("error", (err) => {
+      console.warn("reqest erroe", err);
+    });
+    reqest.addEventListener("success", (event) => {
+      console.log("reqest success :", event);
+      getNameDB();
+      clear();
+    });
+  } else {
+    alert("همه فیلدها باید پر شوند");
+  }
+}
+
+
+
+function getNameDB() {
+  let tx = dataB.transaction(result, "readonly");
+  
+  tx.addEventListener("error", (err) => {
+    console.warn("tx error readonly", err);
+  });
+
+  tx.addEventListener("complete", (event) => {
+    console.log("tx complet readonly", event);
+  });
+
+  let stors = tx.objectStore(result);
+  let reqestget = stors.getAll();
+  reqestget.addEventListener("error", (err) => {
+    console.warn("reqestget", err);
+  });
+  reqestget.addEventListener("success", (event) => {
+  AllData = event.target.result;
+    console.log("reqestget", event);
+    getAllData ()
+  });
+  
+}
+
+function getAllData (){
+let newgetgetAllData = AllData
+localStorage.setItem("newdata", JSON.stringify(newgetgetAllData));
+console.log(newgetgetAllData);
+ 
+}
+function clear() {
+ 
+  VaznInputElem.value = "";
+  FiyInputElem.value = "";
+}
 
 //////////////////دکمه پرکردن////////////////////////////////////////////////////////////
 function PAR() {
@@ -199,8 +301,6 @@ function PAR() {
   cartElem.style.display = "none";
   cartElemPar.style.display = "block";
   refershpar();
-
-  
 
   newH66 = $.createElement("h6"); //////////ایجاد هدر کارت
   newH66.id = "h6";
@@ -244,27 +344,15 @@ function PAR() {
   }
 }
 
-let containerAryy = [];
 function Addzamin() {
-  NameNewZamin.style.display = "flex";
-  inputAddZamin.value = "";
-  inputAddZamin.focus()
+  window.location.reload();
 }
 
-function TaidZamin() {
-  if (inputAddZamin.value) {
-    let newBoxobj = {
-      id: containerAryy.length + 1,
-      NameZamin: inputAddZamin.value,
-      
-    };
-    containerAryy.push(newBoxobj);
-
-    setLocalNameZamin(containerAryy);
-    NameNewZamin.style.display = "none";
-  } else {
-    alert("یک نام برای زمین اتخاب کنید");
-  }
+window.addEventListener("load", showAddZamin);
+function showAddZamin() {
+  NameNewZamin.style.display = "flex";
+  inputAddZamin.value = "";
+  inputAddZamin.focus();
 }
 
 function setLocalNameZamin(containerAryy) {
@@ -274,7 +362,7 @@ function setLocalNameZamin(containerAryy) {
 
 function Generator(containerAryy) {
   let nweli, newA;
-  Olnewzamin.innerHTML = ''
+  Olnewzamin.innerHTML = "";
   containerAryy.forEach(function (containerAryy) {
     nweli = $.createElement("li");
     nweli.className = "nav-item";
@@ -288,31 +376,33 @@ function Generator(containerAryy) {
 
     nweli.setAttribute("onclick", "setMeno(" + containerAryy.id + ")");
 
-   
-
     inputAddZamin.value = "";
   });
 }
-var Index
+var Index;
+let result;
 function setMeno(containerAryyId) {
   let getNeme = JSON.parse(localStorage.getItem("nameZamin"));
   containerAryy = getNeme;
   Index = getNeme.findIndex(function (containerAryy) {
     return containerAryy.id === containerAryyId;
   });
-  let result = getNeme[Index].NameZamin; //با شماره ایندکس ایتم ارایه راپیدا می کنیم و با .NameZamin مقدار ایتم مورد نظر  را
+  result = getNeme[Index].NameZamin; //با شماره ایندکس ایتم ارایه راپیدا می کنیم و با .NameZamin مقدار ایتم مورد نظر  را
   HederCardAsli.innerHTML = result;
-  
+  getNameDB();
 }
 
 function getNameZamin() {
-  let getNeme = JSON.parse(localStorage.getItem("nameZamin"));
-  if (getNeme) {
-    containerAryy = getNeme;
-    Generator(getNeme);
-    HederCardAsli.innerHTML = containerAryy[0].NameZamin;
-    // get0 ()
-  } else {
+  
+    
+    let getNeme = JSON.parse(localStorage.getItem("nameZamin"));
+    if (getNeme) {
+      containerAryy = getNeme;
+      Generator(getNeme);
+      HederCardAsli.innerHTML = containerAryy[0].NameZamin;
+      
+   }
+   else {
     containerAryy = [];
   }
 }
@@ -332,12 +422,13 @@ inputAddZamin.addEventListener("keydown", function (event) {
 });
 ///////////////////////////////////////////////////////////////////////منو رفتن به صفحه دیگر
 
-
 /////////////////////////////////////////////////////////////////
-BtnsabtData .addEventListener ('click' , savearry )
+BtnsabtData.addEventListener("click", savearry);
 btnTaid.addEventListener("click", TaidZamin);
 BtnClose.addEventListener("click", function () {
+  inputAddZamin.value = ''
   NameNewZamin.style.display = "none";
+  INdexedDB();
 });
 addNewzamin.addEventListener("click", Addzamin);
 Btnparkardan.addEventListener("click", PAR);
@@ -345,4 +436,17 @@ Btnparkardan.addEventListener("click", PAR);
 
 btnFrosh.addEventListener("click", showCart);
 
-///////////////////////
+//--------------------------------
+function createTX(nameStor, mode) {
+  let tx = dataB.transaction(nameStor, mode);
+
+  tx.addEventListener("error", (err) => {
+    console.warn("tx", err);
+  });
+
+  tx.addEventListener("complete", (event) => {
+    console.log("tx", event);
+  });
+
+  return tx;
+}

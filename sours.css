@@ -176,7 +176,9 @@ h6{
   background-color: #f1f5fb;
   
 }
-
+#clearDB {
+    cursor: pointer;
+}
 
 .fa-close{
     cursor: pointer !important;
@@ -238,7 +240,7 @@ margin-top: 20px;
     position: absolute;
     top: 50px;
     left: 35px;
-    animation: 1s drop;
+    animation: 0.5s drop;
 }
 #add-namezamin .card-body{
     padding: 0 !important;

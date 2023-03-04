@@ -1,3 +1,4 @@
+
 var $ = document
 let Ulnewzamin = $.getElementById("nav-zamin2");
 let MenoBtn = $.getElementById("joziyat");
@@ -42,7 +43,13 @@ function NextPage() {
         let getNeme = JSON.parse(localStorage.getItem("nameZamin"));
         containerAryy2 = getNeme;
         Generator2 (containerAryy2)
+
   }
+
+  
+
+
+
 
   function Generator2 (containerAryy2){
     let nweli , newA 
@@ -66,7 +73,7 @@ function NextPage() {
 
 let newarry = []
 function getinnerHtml (event) {
-    let informatioZamin = JSON.parse(localStorage.getItem(event.target.innerHTML));
+    let informatioZamin = JSON.parse(localStorage.getItem("newdata"));
     newarry = informatioZamin
       console.log(informatioZamin);
      
