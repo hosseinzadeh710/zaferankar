@@ -73,9 +73,28 @@ body {
     border: 1px solid var(--teme2-color);
    text-align: center;
 }
+/* --------------------مربوط به صفحه اولیه */
+.btn2 {
+    width: 230px;
+}
+ul {
+    list-style-type: none;
+}
 
+#firstPage{
+    font-size: 17px !important;
+   padding-bottom: 0;
+}
+#tarihk-shamsy {
+    width: 223px;
+    text-align: center;
+    box-shadow: 0 0 15px  #E1BEE7 ;
+    border: 1px solid  rgb(240, 147, 147);
+}
+/* ------------------------------- */
 .btnn:hover{
     background-color:var(--teme7-color);
+    box-shadow: 0 0 10px  #fdd110;
 }
 
 .cart input{
@@ -103,12 +122,15 @@ body {
     background-size: cover; */
 }
 
-.par input{
+/* .par input{
     border-radius: 5px !important;
     border: 2px solid #fdd110 ;
-}
+} */
 .kharidar{
     margin-right: 22px;
+    border: 2px solid #E1BEE7 ;
+    border-radius: 5px;
+    height: 30px;
    
 }
 
@@ -156,11 +178,22 @@ body {
 }
 
 h6{
-     font-size: 15px !important; 
+     font-size: 17px !important; 
     margin: 5px !important;
     padding-top: 2px;
 }
-/* #alert{
+/* ----------------------------for kharidar box */
+.namehk{
+    margin-right: 23px;
+}
+.phone{
+    margin-right: 20px;
+}
+.adders{
+    margin-right: 46px;
+}
+
+/* #h6{
     background: var(--teme8-color);
 
 } */
@@ -228,6 +261,7 @@ margin-top: 20px;
 }
 .btn-info:hover {
     background-color: var(--teme10-color) !important;
+     
     outline: none !important;
 }
 
@@ -239,7 +273,7 @@ margin-top: 20px;
     display: none;
     position: absolute;
     top: 50px;
-    left: 35px;
+    left: 15px;
     animation: 0.5s drop;
 }
 #add-namezamin .card-body{
@@ -282,14 +316,24 @@ margin-top: 20px;
     }
 }
 /* ////////////////////////////////////////////////////// */
-#table {
-    width: 800px;
-   
+#p{
+    margin-bottom: 0.5rem !important;
+    height: 25px;
 }
 th {
     text-align: center !important;
-    width: 250px;
+    width: 150px;
 }
 td {
     text-align: center !important;
 }
+
+/* -------------------------- */
+#list {
+    width: 150px;
+    border-color: #b49db8;
+}
+#img {
+    display: none;
+}
+/* -------------------------- */

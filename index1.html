@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sours.css">
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./persianDate/kamadatepicker.min.css">
+
+
+    <title>zaferanKar</title>
+</head>
+
+<body>
+
+    <div class="navbar navbar-expand" id="nav">
+        <div class="container">
+            
+            <div class="logo d-flex">
+                
+                <img src="./img/logo.png" class="img-fluid " width="50" height="45">
+                <h4 id="clearDB" class="mt-2 me-2">Zaferan<span class="text-black">K</span>ar</h4>
+                <div class="me-5">
+                    <a id="firstPage" class="nav-link " href="./index2.html">صفحه اصلی </a>
+                </div>
+            </div>
+            
+            <div class="" id="listbar2">
+                <ul class="nav nav-pills d-flex  p-0" id="nav-zamin2">
+                    <!-- ul های جدید که از جی اس بیاد -->
+                </ul>
+                <div class="">
+                    <input type="text" name="time" id="tarihk-shamsy" placeholder=" مثال : 1402/07/01">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ///////////////////////////////////////////////////// -->
+   
+    <!-- ------------------------------------ -->
+    <div class="container d-flex px-1 m-3 " style="width:100% ;">
+        <div class="col-2">
+            <ul class="mt-5">
+                <h5 class="me-2">لیست خریداران</h5>
+                <li class="nav-item">
+                    <button class="btn btn-info me-3" id="btn-add">
+                        افزودن
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </li>
+            </ul>
+            <ul id="ul-container">
+                <!-- <li class="nav-item">
+                    <button class="btnn m-auto mt-1 mb-1" type="button">reza</button>
+                </li> -->
+               
+            </ul>
+        </div>
+
+        <div class="mt-5 col-4">
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btnn m-1 " id="forosh-btn"> فروش</button>
+                <button type="button" class="btnn m-1 " id="parkardan" title="وا زدن">پَر کردن</button>
+            </div>
+            <div class="d-flex justify-content-center">
+                <p class="me-1" id="p"> </p>
+                <p class="me-1" id="mil">  </p>
+                
+                <p class="me-1" id="toman">  </p>
+            </div>
+            <div class="cart">
+                <div class="d-flex border-bottom justify-content-between " id="alert">
+                </div>
+                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
+                    <label for="kharidar">نام خریدار :</label>
+                    <!-- <input type="text" id="kharidar" class="col-6 kharidar"> onchange="getValue(this.value, this.id )" --> 
+                    <select name=”list” id="kharidar" class="kharidar col-6" >
+                        <!-- <option class="border" value=”esfahan” >اصفهان </option>
+                        <hr>
+                         -->
+                        </select>
+                </div>
+                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1" id="myDiv">
+                    <label for="vazngol"> وزن گلها :</label>
+                    <input type="text" id="vazngol" class="col-6 vazngol ">
+                    <span class="me-2">کیلوگرم</span>
+                </div>
+                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
+                    <label for="ghimat"> قیمت هر من :</label>
+                    
+                    <input type="text" id="ghimat" class="col-6 ghimat "  onkeyup="javascript:this.value=itpro(this.value);" />
+                    <span class="me-2" id="ghimat-vahed"></span>
+                    <span class="me-1">تومان</span>
+                </div>
+                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
+                    <label for="naghdi">پرداخت شده :</label>
+                    <input type="text" id="naghdi" class="col-6 naghdi " placeholder="اگه نداده عدد 0 بزنید" onkeyup="javascript:this.value=itpro(this.value);" />
+                    <span class="me-2" id="naghdi-vahed"></span>
+                    <span class="me-1">تومان</span>
+                </div>
+
+                <div class="col d-flex border-bottom pb-1 flex-wrap me-1">
+                    <label for="ghabz">مانده(قبض) : </label>
+                    <input type="text" id="ghabz" class="col-6 ghabz " placeholder="اگه نداده عدد 0 بزنید" onkeyup="javascript:this.value=itpro(this.value);" />
+                    <span class="me-2" id="ghabz-vahed"></span>
+                    <span class="me-1">تومان</span>
+                </div>
+                <hr class="m-2">
+                <div class="d-flex justify-content-center sabt ">
+
+                </div>
+            </div>
+
+            <div class="cart par">
+                <div class="d-flex border-bottom justify-content-between " id="alert-par">
+                </div>
+                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
+                    <label for="vazn">وزن گلها :</label>
+                    <input type="number" id="vazn" class="col-6 vazn">
+                    <span class="me-2">کیلو گرم</span>
+                </div>
+                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
+                    <label for="adres">محل پرکنی :</label>
+                    <input type="text" id="adres" class="col-6 adres ">
+                </div>
+                <div class="col d-flex border-bottom pb-1 flex-wrap m-1">
+                    <label for="fiy">قیمت پرکنی : </label>
+                    <input type="number" id="fiy" class="col-6 fiy " placeholder=" قیمت هر کیلو">
+                    <span class="me-2">تومان</span>
+                </div>
+                <hr class="m-2">
+                <div class="d-flex justify-content-center sabt " id="sapt-par">
+                </div>
+            </div>
+
+            <div class="cart " id="khrid">
+                <div class="d-flex border-bottom  justify-content-between " id="h6">
+                    <!-- <h6 id="h66"> اطلاعات  <span style="color:#fa1212; font-size: large;">خریدار</span> رو وارد نماید!</h6> -->
+                    <!-- <button class="btn btn-close ps-1 mt-1 " id="btn-close"></button> -->
+                </div>
+                <div class="col  d-flex border-bottom pb-1 flex-wrap m-2">
+                    <label for="namehk">نام خریدار  :</label>
+                    <input type="text" id="namehk" class="col-6 namehk">
+                   
+                </div>
+                <div class="col  d-flex border-bottom pb-1 flex-wrap m-2">
+                    <label for="phone"> شماره تلفن :</label>
+                    <input type="tel" id="phone" class="col-6 phone " placeholder="09151234567">
+                    <img src="" id="img" alt="" srcset="" style="width:45px ; height:30px ;" class="me-4 ">
+                </div>
+                <div class="col d-flex border-bottom pb-1 flex-wrap m-2">
+                    <label for="adders"> آدرس : </label>
+                    <input type="text" id="adders" class="col-6 adders " >
+                    
+                </div>
+                <hr class="m-2">
+                <div class="d-flex justify-content-center sabt " id="container-sabt">
+                    <!-- <button onclick="btnCloses ()" type="button" id="add" class="sapt-kharidar">ثبت</button> -->
+                </div>
+            </div>
+
+        </div>
+        <div class="col-8 border shadow" style="height: 100vh;" >
+            <div class="d-flex justify-content-center border-bottom" style="height: 35px;">
+                <p class="m-auto">فاکتور فروش</p>
+            </div>
+            <div id="factor" class="d-flex justify-content-evenly border-bottom " style="height: 120px;">
+                <div class="d-block border-start " style="width: 350px;">
+                    <div class="d-flex m-2 border-bottom "  style="height: 30px; ;">
+                        <p>نام خریدار :</p>
+                        <span id="namekharidar"  class="me-1"> </span>
+                    </div>
+                    <div class="d-flex m-2 border-bottom "  style="height: 30px; ;">
+                        <p>شماره تلفن :</p>
+                        <span id="Number-phone"  class="me-1"> </span>
+                    </div>
+                    <div class="d-flex m-2  "  style="height: 30px; ;">
+                        <p>آدرس :</p>
+                        <span id="Adress"  class="me-1"> </span>
+                    </div>
+                </div>
+                <div class="d-block " style="width: 350px;">
+                    <div class="d-flex m-2 border-bottom " style="height: 30px; ;">
+                        <p class="ms-3">کل فروش :</p>
+                        <span id="kol-frosh" class="me-1">000000</span>
+                        <span class="me-1">میلیون تومان </span>
+                    </div>
+                    <div class="d-flex m-2 border-bottom " style="height: 30px; ;">
+                        <p class="ms-2">کل دریافتی :</p>
+                        <span id="daryafti" class="me-1">000000</span>
+                        <span class="me-1">میلیون تومان </span>
+                    </div>
+                    <div class="d-flex m-2  " style="height: 30px; ;">
+                        <p>مانده (قبض ) :</p>
+                        <span id="mandeh" class="me-1">000000</span>
+                        <span class="me-1">میلیون تومان </span>
+                    </div>
+                </div>
+            </div>
+        <div class="coontiner m-auto px-4">
+        <div class="d-flex justify-content-center m-auto " id="table">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>تاریخ</th>
+                        <th>وزن گل</th>
+                        <th> قیمت هر من</th>
+                        <th>مبلغ نهایی</th>
+                        <th>پرداخت شده</th>
+                        <th>مانده(قبض)</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                   
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td> </td>
+                        <td id="total-vazn"></td>
+                        <td> </td>
+                        <td id="total-nahay"> </td>
+                        <td id="total-pardakht"></td>
+                        <td id="total-mande"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    </div>
+    <!-- ------------------------------------ -->
+    <script src="./jquery.js"></script>
+    <script src="./persianDate/kamadatepicker.min.js"></script>
+    <script src="./app1.js"></script>
+    <script src="./bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./fontawesome-free-6.2.1-web/js/all.min.js"></script>
+    <script>
+        let options ={
+            placeholder : 'لطفا تاریخ را مشخص کنید', 
+            nextButtonIcon : './img/timeir_next.png',
+            previousButtonIcon :'./img/timeir_prev.png' ,
+            markToday : true ,
+
+        }
+        kamaDatepicker('tarihk-shamsy' , options)
+    </script>
+    <script>
+        var mynumber = 2536584;
+
+// نمایش در div
+// $("#p").html(mynumber.toLocaleString("en"));
+
+//نمایش در input
+// $("#vazngol").val(mynumber.toLocaleString("en"));
+//     </script>
+   
+
+</body>
+
+</html>

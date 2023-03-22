@@ -1,64 +1,35 @@
-let $ = document;
 
-const btnFrosh = $.getElementById("forosh-btn");
-let cartElem = $.querySelector(".cart");
-const btnSabt = $.getElementById("add");
-let alertElem = $.getElementById("alert");
-let H6 = $.getElementById("h6");
-const btnPak = $.getElementById("clear");
-let containerBtn = $.querySelector(".sabt");
-let kharidinput = $.getElementById("kharidar");
-let pardahktinput = $.getElementById("naghdi");
-let ghabzinput = $.getElementById("ghabz");
-let HederCardAsli = $.getElementById("heder-asli");
+
+
+const btnSabt = document.getElementById("add");
+
+let H6 = document.getElementById("h6");
+const btnPak = document.getElementById("clear");
+
+let HederCardAsli = document.getElementById("heder-asli");
 //////////////////////////////////////////////////////////////
-let VaznInput = $.getElementById("vazn");
-let AdressInput = $.getElementById("adres");
-let FiyInput = $.getElementById("fiy");
-const Btnparkardan = $.getElementById("parkardan");
-let cartElemPar = $.querySelector(".par");
-let alertElempar = $.getElementById("alert-par");
-let containerBtnpar = $.querySelector("#sapt-par");
-var VaznInput1 = $.getElementById("hed");
-const BtnsabtData = $.getElementById("sabt-btn");
+
+var VaznInput1 = document.getElementById("hed");
+const BtnsabtData = document.getElementById("sabt-btn");
 
 ///////////////////////////////////////////////////////برای دکمه ایجاد زمین
-const addNewzamin = $.getElementById("add-jadid");
-let NameNewZamin = $.getElementById("add-namezamin");
-const btnTaid = $.getElementById("taid");
-let Olnewzamin = $.getElementById("nav-zamin");
-const BtnClose = $.getElementById("close");
-let Time = $.getElementById("tarihk");
+const addNewzamin = document.getElementById("add-jadid");
+let NameNewZamin = document.getElementById("add-namezamin");
+const btnTaid = document.getElementById("taid");
+let Olnewzamin = document.getElementById("nav-zamin");
+const BtnClose = document.getElementById("close");
+let Time = document.getElementById("tarihk");
 
 ////////////////////////////////////////////////////////صفحه جدید
-let VaznInputElem = $.getElementById("vazn1");
-let FiyInputElem = $.getElementById("fiy2");
+let VaznInputElem = document.getElementById("vazn1");
+let FiyInputElem = document.getElementById("fiy2");
 //////کد برای ساعت////////////////////////////////////////
 let hoursElem = document.getElementById("hours");
 let minElem = document.getElementById("min");
 let secElem = document.getElementById("sec");
-let inputAddZamin = $.getElementById("add-input");
+let inputAddZamin = document.getElementById("add-input");
 
-setInterval(function () {
-  var myData = new Date();
-  var myhours = myData.getHours();
-  var mymin = myData.getMinutes();
-  var mysec = myData.getSeconds();
 
-  if (myhours < 10) {
-    myhours = "0" + myhours;
-  }
-  if (mymin < 10) {
-    mymin = "0" + mymin;
-  }
-  if (mysec < 10) {
-    mysec = "0" + mysec;
-  }
-
-  hoursElem.innerHTML = myhours;
-  minElem.innerHTML = mymin;
-  secElem.innerHTML = mysec;
-}, 1000);
 ////////دکمه فروش/////////////////////////////////////////////////////////////
 function showCart() {
   cartElem.style.display = "block";
@@ -73,11 +44,11 @@ function showCart() {
     containerBtn.innerHTML = "";
   }
 
-  newH6 = $.createElement("h6"); //////////ایجاد هدر کارت
+  newH6 = document.createElement("h6"); //////////ایجاد هدر کارت
   newH6.id = "h6";
   newH6.innerHTML = "اطلاعات رو وارد نماید!";
 
-  newI = $.createElement("button"); ///ایجاد علامت close
+  newI = document.createElement("button"); ///ایجاد علامت close
   newI.className = "btn btn-close ps-1 mt-1 ";
   alertElem.append(newH6, newI);
   newI.addEventListener("click", function () {
@@ -89,13 +60,13 @@ function showCart() {
 
   alertElem.style.backgroundColor = " #e5ccf6";
 
-  newBtnforosh = $.createElement("button"); //////دکمه ثبت
+  newBtnforosh = document.createElement("button"); //////دکمه ثبت
   newBtnforosh.id = "add";
   newBtnforosh.type = "button";
   newBtnforosh.innerHTML = "ثبت";
   newBtnforosh.addEventListener("click", seveInformtion);
 
-  newBtnpak = $.createElement("button"); ////// دکمه پاک کردن
+  newBtnpak = document.createElement("button"); ////// دکمه پاک کردن
   newBtnpak.id = "clear";
   newBtnpak.type = "button";
   newBtnpak.innerHTML = "پاک کردن";
@@ -117,7 +88,7 @@ function showCart() {
       newH6.innerHTML = "با موفقیت ثبت شد";
       inputColor();
 
-      newBtnjadid = $.createElement("button"); /////دکمه جدید
+      newBtnjadid = document.createElement("button"); /////دکمه جدید
       newBtnjadid.type = "button";
       newBtnjadid.id = "jadid";
       newBtnjadid.innerHTML = "جدید";
@@ -155,7 +126,7 @@ function showCart() {
 }
 ////////////////////////////////////////////// seve indexeDB
 // ///////------------------------------بخش وارایش شده با دیتابیس جدید -------------------
-let ClearDB = $.getElementById("clearDB");
+let ClearDB = document.getElementById("clearDB");
 ClearDB.addEventListener("click", clearDB);
 function clearDB() {
   let req = indexedDB.deleteDatabase("zafrankar");
@@ -197,7 +168,7 @@ console.log(containerAryy);
 if (containerAryy.length >= 1) {
 
 
-    let DB = indexedDB.open("zafrankar", verjen);
+    let DB = indexedDB.open("BoxZamin", verjen);
 
 
   DB.addEventListener("error", (err) => {
@@ -216,6 +187,7 @@ if (containerAryy.length >= 1) {
         keyPath: "userId",
       });
     }
+    
   });
 }
 
@@ -302,11 +274,11 @@ function PAR() {
   cartElemPar.style.display = "block";
   refershpar();
 
-  newH66 = $.createElement("h6"); //////////ایجاد هدر کارت
+  newH66 = document.createElement("h6"); //////////ایجاد هدر کارت
   newH66.id = "h6";
   newH66.innerHTML = "اطلاعات رو وارد نماید!";
 
-  newI = $.createElement("button"); ///ایجاد علامت close
+  newI = document.createElement("button"); ///ایجاد علامت close
   newI.className = "btn btn-close ps-1 mt-1 ";
   alertElempar.append(newH66, newI);
 
@@ -319,7 +291,7 @@ function PAR() {
     cartElemPar.style.display = "none";
   });
 
-  newBtnSabt = $.createElement("button"); //////دکمه ثبت
+  newBtnSabt = document.createElement("button"); //////دکمه ثبت
   newBtnSabt.id = "add";
   newBtnSabt.type = "button";
   newBtnSabt.innerHTML = "ثبت";
@@ -361,15 +333,18 @@ function setLocalNameZamin(containerAryy) {
 }
 
 function Generator(containerAryy) {
-  let nweli, newA;
+  let nweli, newA , newButton;
   Olnewzamin.innerHTML = "";
   containerAryy.forEach(function (containerAryy) {
-    nweli = $.createElement("li");
+    nweli = document.createElement("li");
     nweli.className = "nav-item";
 
-    newA = $.createElement("a");
+    newA = document.createElement("a");
     newA.className = "nav-link";
-    newA.innerHTML = containerAryy.NameZamin;
+    newButton = document.createElement('button')
+    newButton.className = 'btnn btn2'
+    newButton.innerHTML = containerAryy.NameZamin;
+    newA.append(newButton)
     newA.style.cursor = "pointer";
     nweli.append(newA);
     Olnewzamin.append(nweli);
@@ -406,11 +381,7 @@ function getNameZamin() {
     containerAryy = [];
   }
 }
-// function get0 () {
-//    var get00 = localStorage.getItem (HederCardAsli.innerHTML)
-//    containerAryy0 = get00
-//    console.log(containerAryy0);
-// }
+
 
 window.addEventListener("load", getNameZamin);
 
@@ -431,10 +402,10 @@ BtnClose.addEventListener("click", function () {
   INdexedDB();
 });
 addNewzamin.addEventListener("click", Addzamin);
-Btnparkardan.addEventListener("click", PAR);
+// Btnparkardan.addEventListener("click", PAR);
 /////////////////// برای دکمه ثبت
 
-btnFrosh.addEventListener("click", showCart);
+
 
 //--------------------------------
 function createTX(nameStor, mode) {
