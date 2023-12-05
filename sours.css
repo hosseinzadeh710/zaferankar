@@ -1,20 +1,24 @@
 
+
 :root{
     --teme-color : #00C853;
     --teme1-color :  #ab74b4;
-    --teme2-color : #E1BEE7 ;
+    --teme2-color : hsl(291, 46%, 83%) ;
     --teme3-color : #da73d1 ;
     --teme4-color :  #93c277;
     --teme5-color : #f76d6d ;
     --teme6-color :#D32F2F;
     --teme7-color : #decfeb;
     --teme8-color : #e5ccf6;
-    --teme9-color : #ac88c6;
+    --teme9-color : #b08fc8;
     --teme10-color : #e4d6f0;
 
 }
-
+input {
+    padding-right: 9px !important;
+}
 body {
+    
      background-color:#f1f5fb!important; 
     /* background-image: url(./img/66-1.jpg); */
     background-repeat: no-repeat;
@@ -22,13 +26,77 @@ body {
     height: 100vh;
     
 }
+
+/* .my-continer::before{
+filter: blur(1px);
+} */
+
 #nav {
   background-image: url(./img/IMG_24381-1536x1024.jpg); 
   background-repeat: no-repeat;
   background-size: cover;
   height: 70px;
 }
+/* ============================ مربوط به قسمت nav box */
+.nav-heder-box{
+    width:99%;
+    height: 82px;
+    border-bottom: 3px solid #f1f5fb;
+    margin: auto;
+    padding:  15px 15px 0 15px;
+    margin-bottom: 0;
+    
+}
+.heder-box {
+    width: 70%;
+   
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.heder-box button {
+    width: 180px;
+}
+.button-click1 {
+    border: 2.7px solid var(--teme1-color) !important;
+}
+.button-click2 {
+    border: 2.7px solid var(--teme1-color) !important;
+}
+.button-click3 {
+    border: 2.7px solid var(--teme1-color) !important;
+}
+.button-click4 {
+    border: 2.7px solid var(--teme1-color)!important;
+}
+.etl-zamin {
+    display: flex;
+    flex-direction: column;
+}
+.Icon {
+    height: 26px;
+    border-left: 0;
+   
+}
 
+#section1 {
+    display: none;
+    position: relative;
+}
+#section2 {
+    display: none;
+}
+#section3 {
+    display: none;
+}
+#section4 {
+    display: none;
+}
+/* ======================================================= */
+.fa-user-plus {
+    font-size: 16px !important;
+}
 .miz{
     width: 90%;
     height: 400px;
@@ -68,7 +136,7 @@ body {
 
 .btnn{
     width: 120px;
-    padding: 2px 0 6px 0;
+    padding: 5px 0 4px 0;
     border-radius: 25px;
     border: 1px solid var(--teme2-color);
    text-align: center;
@@ -83,13 +151,15 @@ ul {
 
 #firstPage{
     font-size: 17px !important;
-   padding-bottom: 0;
+   
 }
-#tarihk-shamsy {
+#tarihk-shamsy3 {
     width: 223px;
     text-align: center;
     box-shadow: 0 0 15px  #E1BEE7 ;
     border: 1px solid  rgb(240, 147, 147);
+    padding-top: 4px;
+    font-size: 18px;
 }
 /* ------------------------------- */
 .btnn:hover{
@@ -99,7 +169,8 @@ ul {
 
 .cart input{
     border-radius: 5px !important;
-    border: 2px solid #E1BEE7 ;
+    border: 1px solid #E1BEE7 ;
+    min-height: 25px !important;
 }
 
 .row {
@@ -127,31 +198,83 @@ ul {
     border: 2px solid #fdd110 ;
 } */
 .kharidar{
-    margin-right: 22px;
-    border: 2px solid #E1BEE7 ;
+    margin-right: 34px;
+    border: 1px solid #E1BEE7 ;
     border-radius: 5px;
     height: 30px;
-   
+    padding-right: 5px;
+    cursor: pointer;
 }
 
+#tarihk-shamsy44 {
+    text-align: center;
+    width: 143px;
+    height: 31px !important;
+    margin-right: 61px;
+    font-size: 15px;
+    border: 1px solid rgb(225 190 231);
+    border-radius: 5px
+}
+#naghdi55 {
+    height: 30px !important;
+    margin-right: 23px !important;
+}
 .naghdi{
-    margin-right: 11px;
+    margin-right: 2px;
+    width: 100px;
 }
 .ghabz{
-    margin-right: 17px;
+    margin-right: 56px;
 }
 .vazngol {
-    margin-right: 29px;
+    margin-right: 45px;
+    padding: 0.5px;
 }
 .ghimat {
     margin-right: 11px;
+    width: 146px;
+   
 }
+.daryafti {
+   background-color: white;
+    height: 20px;
+    border: 1px solid #E1BEE7 ;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    align-items: center;
+    min-height: 26px;
+    cursor: pointer;
+    margin-right: 18px;
+}
+.fa-plus{
+    font-size: 16px !important;
+}
+#Addmoney-pardahkt{
+    margin-top: 3px;
+}
+
+.fa-plus:hover {
+    color: #93c277 !important;
+} 
 
 .colaps{
     height: 190px;
     width: 100%;
 }
-
+#sapt-pardahkt button:hover {
+  background-color: #93c277 !important;
+}
+option {
+    color: #101110;
+    border: 5px solid rebeccapurple;
+    background-color: #ecddea;
+    display: flex;
+    justify-content: center;
+    padding-right: 15px !important;
+    border-radius: 5px;
+}
 
 #plus {
     font-size: 20px;
@@ -169,7 +292,10 @@ ul {
    padding-bottom: 2px;
    margin: 0 5px;
 }
-
+#alert-pardahkty {
+    background-color:rgb(229, 204, 246);
+    height: 34px;
+}
 #add:hover {
     background-color: var(--teme4-color) ;
 }
@@ -178,7 +304,8 @@ ul {
 }
 
 h6{
-     font-size: 17px !important; 
+    width: 200px!important;
+     font-size: 13px !important; 
     margin: 5px !important;
     padding-top: 2px;
 }
@@ -187,10 +314,10 @@ h6{
     margin-right: 23px;
 }
 .phone{
-    margin-right: 20px;
+    margin-right: 14px;
 }
 .adders{
-    margin-right: 46px;
+    margin-right: 47px;
 }
 
 /* #h6{
@@ -207,7 +334,6 @@ h6{
    display: none;
    box-shadow: 0px 0px 10px var(--teme9-color);
   background-color: #f1f5fb;
-  
 }
 #clearDB {
     cursor: pointer;
@@ -229,30 +355,6 @@ h6{
  }
 /* برا قسمت پرکنی */
 
-.vazn {
-    margin-right: 20px;
-    max-width: 160px;
-}
-
-.adres {
-    margin-right: 8px;
-    max-width: 160px;
-}
-.fiy {
-    margin-right: 5px;
-    max-width: 160px;
-}
-/* ایجاد زمین */
-#add-zamin {
-   height: 50px;
-   padding:10px 15px 0;
-   margin: 0 0 5px 5px; 
-   
-}
-
-#listbar {
-margin-top: 20px;
-}
 
 .btn-info {
     background-color: white !important;
@@ -264,43 +366,21 @@ margin-top: 20px;
      
     outline: none !important;
 }
-
-/* #asly{
-    height: 300px;
-} */
-
-#add-namezamin{
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 15px;
-    animation: 0.5s drop;
-}
-#add-namezamin .card-body{
-    padding: 0 !important;
-}
-#add-namezamin .card-footer{
-    padding: 0 !important;
+#mil {
+    font-size: 10px;
 }
 
-#listbar .nav-item{
-    width: 200px !important;
-}
-#listbar .nav-item .nav-link{
-    padding-right: 0 !important;
-}
 
+#btn-add{
+font-size: 13px;
+margin-right:40px;
+
+}
 #col-1{
     width: 315px;
     position: relative;
 }
-#add-jadid:hover{
-    outline: none !important;
-}
 
-#heder-asli {
-    align-items: center;
-}
 #joziyat {
     font-size: 16px !important;
 }
@@ -318,14 +398,15 @@ margin-top: 20px;
 /* ////////////////////////////////////////////////////// */
 #p{
     margin-bottom: 0.5rem !important;
-    height: 25px;
+    font-size: 12px;
 }
-th {
+th{
     text-align: center !important;
     width: 150px;
 }
-td {
+body td {
     text-align: center !important;
+    overflow: hidden;
 }
 
 /* -------------------------- */
@@ -337,3 +418,175 @@ td {
     display: none;
 }
 /* -------------------------- */
+.bg-tr {
+   
+    margin-top: 5px;
+    align-items: center;
+    background-color: #d8d0da;
+}
+
+#cont-print {
+    margin-right: -6px;
+}
+
+#trash-img :hover {
+color: #D32F2F;
+}
+#trash {
+    padding: 0;
+    cursor: pointer;
+    width: 30px !important;
+}
+
+#tbody {
+    position: relative;
+}
+#box-alert {
+    
+    display: none;
+    position: absolute;
+    left: 260px;
+    top: 150px;
+    justify-content: center;
+    padding: 15px;
+    padding-top: 0;
+    z-index: 999;
+    width: 250px;
+    height: 255px;
+    background-color:rgb(237, 240, 241);
+    box-shadow: 0px 0px 10px 15px var(--teme9-color);
+}
+#box-alert p{
+   
+    margin: 5px;
+    text-align: center;
+
+}
+#danjer {
+    color: red;
+}
+
+#Boxprint{
+   
+    overflow: hidden;
+    transition: height 0.1s ease-out;
+}
+::-webkit-scrollbar{
+ width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #bf39f5;
+}
+.trash-img{
+    width: 20px;
+    height: 20px !important;
+    margin-top: 7px;
+   
+}
+
+.transition-alert{
+    width: 220px;
+    height: 10px;
+    overflow: hidden;
+    transition: height 0.1s ease-in;
+}
+#ul-container{
+    padding-right:18px !important;
+    padding-left: 15px !important;
+ 
+}
+
+.closeSvg{
+    box-sizing: border-box !important ;
+    cursor: pointer;
+    font-size: 30px;
+   margin: 0 !important;
+   padding-top: 12px !important;
+}
+.closeSvg:hover {
+  
+color: red !important;
+}
+
+/* ================================ alert-danger */
+#alertDanger2 {
+    width: 200px;
+    height: 195px;
+    box-shadow: 0px 0px 10px 15px var(--teme9-color);
+    display: none;
+}
+.BoxDanger2{
+    overflow: hidden;
+    transition: height 0.1s ease-in;
+    height: 29px;
+}
+#Danger2{
+    margin:2px 10px ;
+    text-align: center;
+    
+    height: 150px;
+}
+#Danger2 p{
+  margin: 0;
+}
+.textdanger{
+    color: red;
+}
+
+#alert-footer{
+    font-size: 12px;
+    font-family: sans-serif;
+  color: #D32F2F;
+    
+}
+
+#close-print {
+    display: none;
+}
+
+/* ------------------------------- sweet alert 2 */
+.swal2-popup.swal2-toast .swal2-title {
+    font-size: 13px !important;
+}
+body.swal2-toast-shown .swal2-container {
+    width: 300px !important;
+  
+}
+.swal2-popup.swal2-toast.swal2-show {
+    margin-top: 80px;
+    box-shadow: 0px 0px 20px 8px var(--teme9-color) !important;
+}
+
+#listbar2{
+    display: flex;
+    height: 45px;
+}
+
+#div-daryafty {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom:8px;
+}
+
+.box-print-All{
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    margin: auto;
+}
+
+.Add-pardahkty-New {
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.Add-pardahkty-New:hover {
+    border-color: red;
+}

@@ -1,0 +1,342 @@
+@font-face {
+  font-family: "FontMan";
+  src: url("./font/Sans\ a4fran3.ttf") format("truetype"),
+    url("./font/Sans\ a4fran3.woff") format("woff"),
+    url("myfont/Vazir.woff2") format("woff2"), url("./font/Sans\ a4fran3.eot");
+}
+
+body {
+  font-family: FontMan !important;
+  font-size: small !important;
+}
+
+:root {
+  --teme-color: #00c853;
+  --teme1-color: #ab74b4;
+  --teme2-color: #e1bee7;
+  --teme3-color: #da73d1;
+  --teme4-color: #93c277;
+  --teme5-color: #f76d6d;
+  --teme6-color: #d32f2f;
+  --teme7-color: #decfeb;
+  --teme8-color: #e5ccf6;
+  --teme9-color: #b08fc8;
+  --teme10-color: #e4d6f0;
+  --teme11-color: #aca5a5;
+  --teme12-color: rgb(236, 238, 240);
+}
+
+.heder-card-Money {
+  margin: 0;
+ 
+}
+.heder-card-Money li {
+    position: relative;
+  cursor: pointer;
+  min-width: 80px;
+}
+.heder-card-Money li span {
+  margin: 18px;
+}
+
+.card-Money {
+  width: 680px;
+  height: 325px;
+  background-color: white;
+  margin: auto;
+  margin-top: 5px;
+}
+.body-card-Money {
+  border-top: 1px solid var(--teme11-color) !important;
+  padding: 5px;
+}
+
+.body-card-Money li {
+  width: 90%;
+  margin: auto;
+  border: 1px solid var(--teme9-color);
+  border-bottom: 4px solid var(--teme9-color);
+  border-radius: 3px;
+  min-height: 245px;
+}
+
+.bottom {
+  width: 100%;
+  height: 5px;
+  border-radius: 7px 7px 0 0;
+}
+
+#naghdy-heder-down {
+background-color: #ee5454;
+}
+
+.card-naghdi {
+  width: 90%;
+  margin: auto;
+}
+
+.card-naghdi div {
+  margin: 2px;
+  padding: 2px;
+}
+
+.date-money {
+  font-size: 17px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.card-Money-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#fa-xmark {
+  font-size: 20px !important;
+}
+
+.Icon-close {
+    position: absolute;
+    left: 55px;
+    top: 15px;
+}
+
+.Icon-close :hover {
+  cursor: pointer;
+  color: #d32f2f !important;
+}
+.btn-success{
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    padding:4px 14px ;
+    border: 1px solid ;
+    border-radius: 3px;
+    color: #5db02d;
+   
+}
+
+.btn-success:hover {
+    color: black !important;
+    background-color: #a1d782 !important;
+}
+.btn-taid{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.checkBox{
+    width: 14px;
+    height: 14px;
+   margin: 2px;
+   margin-left: 4px;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+
+.card-check{
+    width: 90%;
+    margin: auto
+}
+.card-check div {
+    margin: 2px;
+    padding: 2px;
+  }
+
+  #tarihk-shamsy2{
+   width: 150px;
+   /* margin-right: 15px; */
+   border:1px solid var(--teme11-color) ;
+   font-size: 17px;
+   cursor: pointer;
+   padding-right:30px;
+   padding-top: 2px;
+   border-radius: 4px;
+  }
+
+  #tarihk-shamsy4 {
+    display: flex;
+    align-items: center;
+  }
+
+  .date-check{
+    display: flex;
+    align-items: center;
+  }
+
+  #kelo {
+    width: 40px;
+    padding-right: 6px;
+  }
+  #gram {
+    width: 50px;
+    padding-right: 5px;
+  }
+  #naghdi-zaferan-vahed {
+    margin-right: 5px;
+    font-size: 12px;
+  }
+   
+  #naghdi-zaferan {
+    padding-right: 10px;
+  }
+
+  #vahed-zaferan{
+    font-size: 12px;
+}
+.toman{
+      font-size: 12px;
+  }
+.toman3{
+      color: red;
+  }
+.toman2{
+      font-size: 11px;
+      overflow: hidden;
+  }
+
+  .disply {
+    display: none;
+  }
+
+  .money-card{
+    position: absolute;
+    
+    right: 280px;
+
+  }
+ 
+  .money-card {
+    display: none;
+  }
+
+  .btn-close-Icon {
+    border: none !important;
+    background-color: white;
+  } 
+
+  .style-vahed {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin:3px auto;
+    font-size: 11px;
+
+  }
+  .style-vahed span {
+    color: #f00101ee;
+  }
+  
+  #Addmoney {
+padding-top: 3px;
+  }
+#card-bdehcar {
+    display: none;
+}
+
+#vahed-bedehkar {
+    font-size: 11px;
+    margin-right: 5px;
+    color: #f00101ee;
+}
+
+.fa-calendar-plus{
+font-size: 15px !important;
+color: #6c6a6c !important;
+margin: 0 5px 0 0 !important;
+
+}
+
+.modal{
+  
+   top: 100px !important;
+    left: 343px !important;
+}
+.box-daryafty{
+  margin: auto;
+  
+ width: 800px;
+ 
+}
+
+.heder-box-daryafty{
+  height: 50px;
+  align-items: center;
+  text-align: center;
+  
+ margin-right: 40px;
+ font-size: 15px;
+}
+
+.fa-print{
+  font-size: 20px !important;
+}
+.fa-rotate-left{
+  font-size: 20px !important;
+}
+
+.titer-factor{
+  display: flex;
+  align-items: center;
+  
+}
+.Div-joz {
+  cursor: pointer;
+  color: #181c16;
+}
+.Div-joz:hover {
+ color: #d32f2f;
+}
+.FountSize{
+  font-size: 11px;
+}
+.td-style{
+  width: 100px !important;
+  align-items: center !important;
+}
+.td-remove-style {
+  width: 20px !important;
+}
+#foter-jozYate {
+  text-align: right !important;
+}
+
+
+.modal-dialog2{
+  position: absolute !important;
+  top:19px !important;
+  max-width: 850px !important;
+}
+.modal2{
+  position: absolute !important;
+  left: 25px !important;
+  width: 850px !important;
+  height: 100vh !important;
+}
+
+#delet-All{
+  padding: 15px;
+  cursor: pointer;
+}
+.fa-circle-exclamation{
+  font-size: 17px;
+}
+#swal2-title{
+  font-size: 16px;
+  
+}
+.span-joz{
+  padding: 4px;
+  padding-bottom: 6px;
+}
+
+#vahed-card{
+  color: red;
+  font-size: 10px !important;
+
+}

@@ -1,6 +1,4 @@
 
-
-
 const btnSabt = document.getElementById("add");
 
 let H6 = document.getElementById("h6");

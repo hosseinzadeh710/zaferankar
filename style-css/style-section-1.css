@@ -1,0 +1,315 @@
+
+
+
+#section1{
+    width: 95%;
+    margin: auto;
+   
+}
+.continer-section1{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+}
+#Box-card-zamin {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+}
+.box-cart{
+    background-image: url('../img/images.jpg');
+    background-repeat: no-repeat;
+    background-size: 70% 100px;
+    background-position: 0% 77%;
+    width: 250px;
+    height: 330px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 25px;
+    margin-top:10px
+}
+
+.item-cart{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    align-items: center;
+    
+}
+.item-cart span {
+    margin: 3px;
+}
+#img-cart-item {
+    display: flex;
+    justify-content: center;
+   width:90%;
+    height: 70px;
+}
+.img-cart {
+    width: 100%;
+    height: 70px;
+}
+
+#heder-cart-item {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    background-color:rgb(229, 204, 246);
+    border: 1px solid rgb(229, 204, 246);
+    border-radius: 10px 10px 0px 0px;
+    height: 32px;
+}
+
+#heder-cart-item span {
+    margin-right: 10px;
+}
+.fa-circle-xmark {
+    margin-left: 10px !important;
+    font-size: 17px !important;
+    cursor: pointer !important;
+}
+.fa-circle-xmark:hover {
+    color: red !important;
+}
+
+.transbox {
+    width: 100%;
+    height:254px;
+    padding-right:3px;
+}
+
+#btn-add-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.btn-add-card-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+.btn-add-card-item:hover{
+    border-color: red;
+}
+
+#I-card{
+  
+    margin: 2px !important;
+}
+#span-card {
+    font-size: 11px;
+}
+/* ================================= */
+.navebar-section1-item {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 90px;
+    background-color: lightgray;
+    margin: auto;
+    margin-top: 8px;
+    border-radius : 5px;
+}
+.heder-nav{
+    
+    height: inherit;
+    margin: 2px;
+    padding: 5px;
+}
+.part-1 {
+ width: 20%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+
+}
+.part-2 {
+ width: 40%;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ 
+}
+.part-3 {
+ width: 40%;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ 
+}
+.add-zamin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin: auto;
+    border: 1px solid ;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.add-zamin:hover {
+    border-color: red;
+}
+.card-add-zamin{
+    width: 230px;
+    height: 310px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 0 !important;
+}
+.caed-item-add{
+    width: 90%;
+    height:65px;
+    margin-right: 25px;
+    
+    padding: 2px;
+}
+.titel-card-add{
+   
+    width: 100%;
+    height: 60px;
+}
+.card-add {
+    display: flex;
+    justify-content: center;
+    background-color:rgb(229, 204, 246);
+    border: 1px solid rgb(229, 204, 246);
+    border-radius: 10px 10px 0px 0px;
+    height: 32px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-add{
+    border-radius: 5px;
+    padding-right:8px;
+}
+.sabt-btn{
+    width: 100%;
+    height: 40px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+#span-sabt {
+    width: 70px !important;
+    height: 30px !important;
+    padding: 5px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border: 2px solid !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+}
+#span-sabt:hover {
+    border-color: rgb(0, 255, 60) !important;
+}
+.modal-add-zamin{
+    width: 265px !important;
+    height: 400px !important;
+  
+}
+#btn-closee{
+    margin-right: 210px;
+}
+.modal-zamin {
+    max-width: 800px !important;
+}
+.modal3 {
+    position: absolute !important;
+    left: 215px !important;
+    top: 2px !important;
+    width: 850px !important;
+    height: 100vh !important;
+
+}
+.card-info-zamin {
+    border: 1px solid;
+}
+#tarihk-shamsy {
+    width: 170px;
+    text-align: center;
+    height: 25px;
+    border: 2px solid;
+    border-radius: 5px;
+    padding-top: 4px;
+    font-size: 14px;
+   
+}
+.bd-dropdown select {
+    width: 95%!important;
+}
+.bd-table{
+    width: 150px!important;
+}
+.modal-INFO-zamin {
+width: 275px !important;
+}
+.heder-box-daryafty {
+    display: flex;
+    justify-content: space-between;
+}
+.Add-new-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 35px;
+    padding: 5px;
+}
+.Add-new-info:hover {
+    border-color: red;
+}
+.Box-jozyat-zamin {
+    width: 700px;
+    height: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    display: none;
+
+}
+.modall-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+.header-spaan {
+    min-width: 235px;
+}
+.Remove-Item-list-Info {
+    width: 70px;
+    cursor: pointer;
+   
+   
+}
+#vahed-Ghamat-Info {
+    font-size: 10px;
+}

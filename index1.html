@@ -6,259 +6,812 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./sours.css">
+    <link rel="stylesheet" href="./style-card-money.css">
+    <link rel="stylesheet" href="./style-css/style-section-1.css">
     <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./persianDate/kamadatepicker.min.css">
-
-
     <title>zaferanKar</title>
 </head>
 
 <body>
+  <div class="nave-bar-1">
+    <div class="my-continer">
+        <div class="navbar navbar-expand border" id="nav">
+            <div class="container">
 
-    <div class="navbar navbar-expand" id="nav">
-        <div class="container">
-            
-            <div class="logo d-flex">
-                
-                <img src="./img/logo.png" class="img-fluid " width="50" height="45">
-                <h4 id="clearDB" class="mt-2 me-2">Zaferan<span class="text-black">K</span>ar</h4>
-                <div class="me-5">
-                    <a id="firstPage" class="nav-link " href="./index2.html">صفحه اصلی </a>
+                <div class="logo d-flex">
+                    <div class="me-5 mt-1" id="delet-All">
+                        <i class="fa-solid fa-circle-exclamation" style="color: #845487;"></i>
+                    </div>
+                    <img src="./img/logo.png" class="img-fluid " width="50" height="45">
+                    <h4  class="mt-2 me-2">Zaferan<span class="text-black">K</span>ar</h4>
+                    
+                </div>
+
+                <div id="listbar2">
+                    <p class="ms-2 py-2"> تاریخ :</p>
+                    <div class="">
+                        <input type="text" name="time" id="tarihk-shamsy3" placeholder=" مثال : 1402/07/01">
+                    </div>
                 </div>
             </div>
-            
-            <div class="" id="listbar2">
-                <ul class="nav nav-pills d-flex  p-0" id="nav-zamin2">
-                    <!-- ul های جدید که از جی اس بیاد -->
-                </ul>
-                <div class="">
-                    <input type="text" name="time" id="tarihk-shamsy" placeholder=" مثال : 1402/07/01">
-                   
+        </div>
+  </div>
+  </div>
+    <div class="nav-bar-2">
+        <div class="nav-heder-box">
+            <div class="heder-box ">
+                <div class="etl-zamin">
+                    <button class="btnn m-auto mt-1 " id="etl-zamin-btn" type="button">اطلاعات زمین ها</button>
+                    <div class="etl-zamin-box m-auto">
+
+                    </div>
+                </div>
+                <div class=" etl-zamin">
+                    <button class="btnn m-auto mt-1 " id="etl-frosh-btn" type="button">فروش گل ها</button>
+                    <div class="etl-frosh m-auto"></div>
+                </div>
+                <div class=" etl-zamin">
+                    <button class="btnn m-auto mt-1 " id="etl-par-btn" type="button">پرکردن گل ها</button>
+                    <div class="etl-par m-auto"></div>
+                </div>
+                <div class=" etl-zamin">
+                    <button class="btnn m-auto mt-1 " id="etl-kargar-btn" type="button">اطلاعات کارگر ها</button>
+                    <div class="etl-kargar m-auto"></div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ///////////////////////////////////////////////////// -->
-   
-    <!-- ------------------------------------ -->
-    <div class="container d-flex px-1 m-3 " style="width:100% ;">
-        <div class="col-2">
-            <ul class="mt-5">
-                <h5 class="me-2">لیست خریداران</h5>
-                <li class="nav-item">
-                    <button class="btn btn-info me-3" id="btn-add">
-                        افزودن
-                        <i class="fa fa-plus"></i>
-                    </button>
-                </li>
-            </ul>
-            <ul id="ul-container">
-                <!-- <li class="nav-item">
-                    <button class="btnn m-auto mt-1 mb-1" type="button">reza</button>
-                </li> -->
+        <section id="section1">
+            <div class="navebar-section1">
+                <div class="navebar-section1-item">
+                    <div class="heder-nav part-1">
+                        <div class="add-zamin" data-bs-toggle="modal"
+                        data-bs-target="#add-new-zamin">
+                            <span class="me-1">افزودن زمین </span>
+                            <i class="fa-solid fa-plus m-2" style="color: #50943d;"></i>
+                        </div>
+                    </div>
+                    <div class="heder-nav part-2 ">
+                        <div class="m-auto" >
+                            <span class="m-auto">مجموع گل دهی همه زمین ها </span>
+                        </div>
+                        <div class="m-auto" >
+                        <span class="m-auto">980 کیلوگرم</span>
+                        </div>
+                    </div>
+                    <div class="heder-nav part-3">
+                     <div class="d-flex justify-content-center m-auto">
+                        <span>مجموع درآمد همه  زمین ها </span>
+                     </div>
+                        <div class="d-flex justify-content-center m-auto">
+                            <span>750000000 </span>
+                        <span>هفصدو پنجاه میلیون</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <div class="continer-section1">
+            <div class="modal  fade" id="add-new-zamin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content modal-add-zamin">
+                    <form action="#">
+                    <div class="modal-header">
+                       
+                      <button id="btn-closee"  type="reset" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        
+                    </div>
+                    <div class="modal-body">
+                       
+                        <div class="card-add-zamin">
+                            <div class="titel-card-add">
+                               <div class="card-add">
+                                <span>اطلاعات خواسته شده را کامل کنید !</span>
+                               </div>                
+                            <div class="caed-item-add">
+                                <span class="mb-1">نام زمین :</span>
+                                <input class="mt-1 input-add" type="text" name="" id="Name-Zamin">
+                            </div>
+                            <div class="caed-item-add">
+                                <span class="mb-1"> چند سال کشت :</span>
+                                <input class="mt-1 input-add" type="number" name="" id="Yers-Zamin">
+                            </div>
+                            <div class="caed-item-add">
+                                <span class="mb-1"> سطح زیرکشت : (مترمربع)</span>
+                                <input class="mt-1 input-add" type="number" name="" id="sathe-Zamin">
+                            </div>
+                            <div class="sabt-btn">
+                                  <div class="span-sabt" data-bs-dismiss="modal">
+                                <button type="reset" id="span-sabt" >ثبت</button>
+                                  </div>                
+                            </div>
+                          </div>
+                          </div>
+                       </form>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+              <div id="Box-card-zamin">
                
-            </ul>
-        </div>
-
-        <div class="mt-5 col-4">
-            <div class="d-flex justify-content-center">
-                <button type="button" class="btnn m-1 " id="forosh-btn"> فروش</button>
-                <button type="button" class="btnn m-1 " id="parkardan" title="وا زدن">پَر کردن</button>
             </div>
-            <div class="d-flex justify-content-center">
-                <p class="me-1" id="p"> </p>
-                <p class="me-1" id="mil">  </p>
-                
-                <p class="me-1" id="toman">  </p>
-            </div>
-            <div class="cart">
-                <div class="d-flex border-bottom justify-content-between " id="alert">
+            <div class="">
+                <div class="Box-jozyat-zamin">
+                    <!-- <div class="modal modal3 fade" id="modal-joz-zamin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"> -->
+                            <div class="modall-header">
+                                   <div class="header-spaan" >
+                                    <span>لیست گل دهی زمین :</span>
+                                    <span id="name-zamin"></span>
+                                   </div>
+                                   <div class="Add-new-info" data-bs-toggle="modal" data-bs-target="#add-info-zamin">
+                                    <span> افزودن اطلاعات جدید</span>
+                                    <i class="fa-solid fa-plus me-2" style="color: #50943d;"></i>
+                                   </div>
+                               
+                                <div class="">
+                              <button id="btn-clo-joz" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="box-cart-zamin">
+                                    <div class="body-box-cart-zamin">
+                                        <div class="">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr >
+                                                        <th>تاریخ</th>
+                                                        <th> وزن گلها (کیلو گرم)</th>
+                                                        <th> قیمت هر من</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="tbody_jozyate-zamin">
+                                                 
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr class="bg-tr">
+                                                     <td> جمع کل</td>
+                                                    <td id="Total-vazn"> </td>
+                                                    <td></td>
+                                                    <td> </td>
+                                                    </tr>                       
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                 </div>
-                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
-                    <label for="kharidar">نام خریدار :</label>
-                    <!-- <input type="text" id="kharidar" class="col-6 kharidar"> onchange="getValue(this.value, this.id )" --> 
-                    <select name=”list” id="kharidar" class="kharidar col-6" >
-                        <!-- <option class="border" value=”esfahan” >اصفهان </option>
-                        <hr>
-                         -->
+                <div class="cart-box-add-zamin">
+                    <div class="">
+    
+                    </div>
+                </div>
+                <!-- ====================== -->
+           
+                <div class="modal  fade" id="add-info-zamin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content modal-INFO-zamin">
+                        
+                        <div class="modal-header">
+                           
+                          <button id="btn-closee" type="reset" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            
+                        </div>
+                        <div class="modal-body">
+                           
+                            <div class="card-add-zamin">
+                                <div class="titel-card-add">
+                                   <div class="card-add">
+                                    <span>اطلاعات خواسته شده را کامل کنید !</span>
+                                   </div>                
+                                <div class="caed-item-add">
+                                    <span class="mb-1" >انتخاب تاریخ:</span>
+                            <input type="text" name="time" id="tarihk-shamsy">
+                                </div>
+                                <div class="caed-item-add">
+                                    <span class="mb-1">  وزن گلها (کیلو گرم) :</span>
+                                    <input class="mt-1 input-add" type="number" name="" id="vazn-info-zamin">
+                                </div>
+                                <div class="caed-item-add">
+                                    <span class="mb-1"> قیمت روزانه (هر من) :</span>
+                                    <input type="text" id="fiy-Info-Zamin" class="mt-1 input-add"
+                                        onkeyup="javascript:this.value=itpro(this.value);">
+                                          <div class="">
+                                              <span id="vahed-Ghamat-Info"></span>
+                                          </div>
+                                </div>
+                                <div class="sabt-btn">
+                                      <div class="span-sabt-btn" data-bs-dismiss="modal">
+                                    <button type="reset" id="span-sabt" >ثبت</button>
+                                      </div>                
+                                </div>
+                              </div>
+                              </div>
+                           
+                        </div>
+                      
+                      </div>
+                    </div>
+                <!-- ======================== -->
+            </div>
+              
+         
+        </section>
+        <section id="section2" class="mt-3">
+                <!-- Modal-jozyate========================================================= -->
+              <div class="modal modal2 fade" id="modal-joz" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog2">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="heder-box-daryafty">
+                            <span>لیست پرداختی پول توسط : </span>
+                            <span style="margin: 5px;"> آقای </span>
+                            <span id="namekhaeidar-joz"> </span>
+                        </div>
+                        <div class="btn-clo-joz">
+                      <button id="btn-clo-joz" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="box-daryafty">
+                           
+                            <div class="body-box-daryafty">
+                                <div class="">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr >
+                                                <th style="width:20px;"></th>
+                                                <th>تاریخ</th>
+                                                <th>مبلغ</th>
+                                                <th>نوع واریزی</th>
+                                                <th>شرح توضیحات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbody_jozyate">
+                                         
+                                        </tbody>
+                                        <tfoot>
+                                            <tr class="bg-tr">
+                                            <td style="width:20px;"></td>
+                                            <td>جمع کل پرداختی ها :</td>
+                                            <td><span id="foter-joz"></span></td>
+                                            <td colspan="2" id="foter-jozYate"><span id="vahed-foter-joz"></span></td>
+                                            
+                                            </tr>                       
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" id="close-jozyate" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                      <button  type="button" id="print-jozyate" class="btn btn-primary">
+                       چاپ
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                    <!-- ============================================= -->
+            <div class="container d-flex px-1 mt-1" id="cont-print" style="width:100% ;">
+                <div class="col-2 border-start" id="print2">
+                    <ul class="mt-4">
+                        <span class="me-3 " style="font-size:14px ;">لیست خریداران</span>
+                        <li class="nav-item mt-1">
+                            <button class="btn btn-info" id="btn-add" title="افزودن خریدار">
+                                <i class="fa-solid fa-user-plus"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    <ul id="ul-container">
+                        <!-- <li class="nav-item">
+                        <button class="btnn m-auto mt-1 mb-1" type="button">reza</button>
+                    </li> -->
+
+                    </ul>
+                </div>
+
+                <div class="mt-3 col-4" id="print3">
+                    <div class="d-flex justify-content-center">
+                       <div class="d-block">
+                        <button type="button" class="btnn m-1 " id="forosh-btn" style="width:150px ;">ثبت فروش
+                            روزانه
+                            <i class="fa-solid fa-chevron-down" style="color: #511f4d;"></i>
+                        </button>
+                        <button type="button" class="btnn m-1 " id="pardahkty-btn" style="width:150px ;">ثبت پراختی
+                            جدید
+                            <i class="fa-solid fa-chevron-down" style="color: #511f4d;"></i>
+                        </button>
+                       </div>
+                        
+                    </div>
+                    <div class="d-block">
+                        <div class="d-flex justify-content-center">
+                            <span id="resolt-list"></span>
+                            <p class="me-1" id="p"> </p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <p class="me-1" id="mil"> </p>
+                        </div>
+                    </div>
+                    <div class="cart ">
+                        <div class="d-flex border-bottom justify-content-between " id="alert">
+                        </div>
+                        <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
+                            <label for="kharidar">نام خریدار :</label>
+                            <select name=”list” id="kharidar" class="kharidar col-5">
+                            </select>
+                        </div>
+
+                        <div class="col  d-flex border-bottom pb-1 flex-wrap m-1" id="myDiv">
+                            <label for="vazngol"> وزن گلها :</label>
+                            <input type="number" id="vazngol" class="col-5 vazngol ">
+                            <span class="me-2">کیلوگرم</span>
+                        </div>
+                        <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
+                            <div class=" d-block" style="width:100% ;">
+                                <div class="m-1 d-flex">
+                                    <label for="ghimat"> قیمت هر من :</label>
+
+                                    <input type="text" id="ghimat" class=" ghimat "
+                                        onkeyup="javascript:this.value=itpro(this.value);">
+                                </div>
+                                <div class="style-vahed">
+                                    <span class="m-auto" id="ghimat-vahed"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col  d-flex border-bottom pb-1 flex-wrap m-1" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            <span>مبلغ دریافتی :</span>
+                            <div class="col-5 daryafti naghdi" id="naghdi2">
+                                <div class="" id="daryaft-value"></div>
+                                <div class="" id="Addmoney">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="style-vahed">
+                                <span id="naghdi-vahed2"> </span>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="col d-flex border-bottom pb-1 flex-wrap me-1">
+                            <div class=" d-block" style="width:100% ;">
+                                <label for="ghabz">مانده : </label>
+                                <input type="text" id="ghabz" class="col-5 ghabz " placeholder="اگه نداده عدد 0 بزنید"
+                                    onkeyup="javascript:this.value=itpro(this.value);" />
+                            </div>
+                            <div class="style-vahed">
+                                <span class="me-2" id="ghabz-vahed"></span>
+                            </div>
+                        </div> -->
+                        <hr class="m-2">
+                        <div class="d-flex justify-content-center sabt ">
+
+                        </div>
+                    </div>
+
+                    <div class="cart Cart-pardahkt">
+                    <div class="d-flex border-bottom justify-content-between " id="alert-pardahkty">
+                      <h6>اطلاعات <span style="color:#fa1212; font-size:15px;">پرداختی</span> را وارد نمایید </h6>
+                      <button id="btn-close-pardahkty" class="btn btn-close" style="margin:3px ;"></button>
+                    </div>
+                    <div class="col d-flex border-bottom pb-1 flex-wrap m-2">
+                        <label for="fiy"> تاریخ : </label>
+                        <input type="text" name="time" id="tarihk-shamsy44" placeholder="کلیک کنید ...">
+
+                    </div>
+                    <div class="col  d-flex border-bottom pb-1 flex-wrap m-2">
+                        <label for="kharidar-pardahkt">نام خریدار :</label>
+                        <select name=”list” id="kharidar-pardahkt" class="kharidar col-5">
                         </select>
-                </div>
-                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1" id="myDiv">
-                    <label for="vazngol"> وزن گلها :</label>
-                    <input type="text" id="vazngol" class="col-6 vazngol ">
-                    <span class="me-2">کیلوگرم</span>
-                </div>
-                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
-                    <label for="ghimat"> قیمت هر من :</label>
+                    </div>
+                    <div class="col  d-flex border-bottom pb-1 flex-wrap m-2" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                        <label for="naghdi55"> مبلغ دریافتی:</label>
+                        <div class="col-5 daryafti" id="naghdi55">
+                            <div class="" id="daryaft-value-pardahkt"></div>
+                            <div class="" id="Addmoney-pardahkt">
+                                <i class="fa fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="style-vahed">
+                            <span id="naghdi-vahed22"></span>
+                        </div>
+                    </div>
                     
-                    <input type="text" id="ghimat" class="col-6 ghimat "  onkeyup="javascript:this.value=itpro(this.value);" />
-                    <span class="me-2" id="ghimat-vahed"></span>
-                    <span class="me-1">تومان</span>
-                </div>
-                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
-                    <label for="naghdi">پرداخت شده :</label>
-                    <input type="text" id="naghdi" class="col-6 naghdi " placeholder="اگه نداده عدد 0 بزنید" onkeyup="javascript:this.value=itpro(this.value);" />
-                    <span class="me-2" id="naghdi-vahed"></span>
-                    <span class="me-1">تومان</span>
+                    <hr class="m-2">
+                    <div class="d-flex justify-content-center sabt " id="sapt-pardahkt">
+                        <button>ثبت</button>
+                    </div>
                 </div>
 
-                <div class="col d-flex border-bottom pb-1 flex-wrap me-1">
-                    <label for="ghabz">مانده(قبض) : </label>
-                    <input type="text" id="ghabz" class="col-6 ghabz " placeholder="اگه نداده عدد 0 بزنید" onkeyup="javascript:this.value=itpro(this.value);" />
-                    <span class="me-2" id="ghabz-vahed"></span>
-                    <span class="me-1">تومان</span>
-                </div>
-                <hr class="m-2">
-                <div class="d-flex justify-content-center sabt ">
+                    <div class="cart " id="khrid">
+                        <div class="d-flex border-bottom  justify-content-between " id="h6">
+            
+                        </div>
+                        <div class="col  d-flex border-bottom pb-1 flex-wrap m-2">
+                            <label for="namehk">نام خریدار :</label>
+                            <input type="text" id="namehk" class="col-6 namehk">
 
-                </div>
-            </div>
+                        </div>
+                        <div class="col  d-flex border-bottom pb-1 flex-wrap m-2">
+                            <label for="phone"> شماره تلفن :</label>
+                            <input type="tel" id="phone" class="col-6 phone " placeholder="09151234567" maxlength="11">
+                            <img src="" id="img" alt="" srcset="" style="width:45px ; height:30px ;" class="me-4 ">
+                        </div>
+                        <div class="col d-flex border-bottom pb-1 flex-wrap m-2">
+                            <label for="adders"> آدرس : </label>
+                            <input type="text" id="adders" class="col-6 adders ">
 
-            <div class="cart par">
-                <div class="d-flex border-bottom justify-content-between " id="alert-par">
-                </div>
-                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
-                    <label for="vazn">وزن گلها :</label>
-                    <input type="number" id="vazn" class="col-6 vazn">
-                    <span class="me-2">کیلو گرم</span>
-                </div>
-                <div class="col  d-flex border-bottom pb-1 flex-wrap m-1">
-                    <label for="adres">محل پرکنی :</label>
-                    <input type="text" id="adres" class="col-6 adres ">
-                </div>
-                <div class="col d-flex border-bottom pb-1 flex-wrap m-1">
-                    <label for="fiy">قیمت پرکنی : </label>
-                    <input type="number" id="fiy" class="col-6 fiy " placeholder=" قیمت هر کیلو">
-                    <span class="me-2">تومان</span>
-                </div>
-                <hr class="m-2">
-                <div class="d-flex justify-content-center sabt " id="sapt-par">
-                </div>
-            </div>
-
-            <div class="cart " id="khrid">
-                <div class="d-flex border-bottom  justify-content-between " id="h6">
-                    <!-- <h6 id="h66"> اطلاعات  <span style="color:#fa1212; font-size: large;">خریدار</span> رو وارد نماید!</h6> -->
-                    <!-- <button class="btn btn-close ps-1 mt-1 " id="btn-close"></button> -->
-                </div>
-                <div class="col  d-flex border-bottom pb-1 flex-wrap m-2">
-                    <label for="namehk">نام خریدار  :</label>
-                    <input type="text" id="namehk" class="col-6 namehk">
-                   
-                </div>
-                <div class="col  d-flex border-bottom pb-1 flex-wrap m-2">
-                    <label for="phone"> شماره تلفن :</label>
-                    <input type="tel" id="phone" class="col-6 phone " placeholder="09151234567">
-                    <img src="" id="img" alt="" srcset="" style="width:45px ; height:30px ;" class="me-4 ">
-                </div>
-                <div class="col d-flex border-bottom pb-1 flex-wrap m-2">
-                    <label for="adders"> آدرس : </label>
-                    <input type="text" id="adders" class="col-6 adders " >
+                        </div>
+                        <hr class="m-2">
+                        <div class="d-flex justify-content-center sabt " id="container-sabt">
                     
+                        </div>
+                    </div>
+                    <div id="alertDanger2">
+                        <div class="BoxDanger2">
+                            <div id="Danger2">
+                                <p class="textdanger">! هشدار !</p>
+                                <p>آیا از حذف خریدار </p>
+                                <p>به نام : <span id="delet-Nameuser"></span></p>
+                                <p class="m-1">از لیست مطمئن هستید؟؟</p>
+                                <hr class="m-1">
+                                <p id="alert-footer"><span style="font-size: 15px;">توجه</span> : در صورت حذف ، تمامی
+                                    اطلاعات ثبت
+                                    شده با این نام از نرم افزار پاک می شود!</p>
+                            </div>
+                            <hr class="m-1">
+                            <div class="d-flex justify-content-evenly mb-3">
+
+                                <button class="btnn yes-user-Delet" style="width: 50px; height: 30px;">بله</button>
+                                <button id="No-user-Delet" class="btnn" style="width: 50px; height: 30px;">خیر</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <hr class="m-2">
-                <div class="d-flex justify-content-center sabt " id="container-sabt">
-                    <!-- <button onclick="btnCloses ()" type="button" id="add" class="sapt-kharidar">ثبت</button> -->
+                <div id="Boxprint" class="col-8 border shadow">
+                    <div class="d-flex justify-content-center border-bottom" style="height: 35px;">
+                        <p class="m-auto">فاکتور فروش</p>
+                    </div>
+                    <div class="">
+                        <div class="border-bottom pe-2 titer-factor me-3">
+                            <div class="d-flex m-2 titer-factor " style="height: 25px; width: 30%;">
+                                <p class="m-0">نام خریدار :</p>
+                                <span id="namekharidar" class="me-1"> </span>
+                            </div>
+                            <div class="d-flex m-2 titer-factor " style="height: 25px;  width: 33%;">
+                                <p class="m-0">شماره تلفن :</p>
+                                <span id="Number-phone" class="me-1"> </span>
+                            </div>
+                            <div class="d-flex m-2 titer-factor " style="height: 25px;  width: 36%;">
+                                <p class="m-0">آدرس :</p>
+                                <span id="Adress" class="me-1"> </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="factor" class="d-flex me-3 border-bottom " style="height: 120px; width: 100%;">
+                      
+                        <div class="d-block " style="width:100% ;" >
+                            <div class="d-flex m-2 border-bottom " style="height: 25px; ;">
+                                <p class="ms-2" style="min-width: 75px;">کل فروش :</p>
+                                <span id="kol-frosh" class=""></span>
+                                <span class="me-2 toman2" id="v-forosh"> </span>
+                            </div>
+                            <div class="m-2 border-bottom " style="height: 25px; ;" id="div-daryafty">
+                               <div class="d-flex">
+                                <p class="m-0" style="min-width: 75px;">کل دریافتی :</p>
+                                <span id="daryafti" class="me-2"></span>
+                                <span class="me-2 toman2" id="v-daryafti"> </span>
+                               </div>
+                              <div class="ms-4 Div-joz " data-bs-toggle="modal" data-bs-target="#modal-joz">
+                                <span class="span-joz m-1 border"> جزئیات پرداخت 
+                                <i class="fa-solid fa-chevron-down" style="color: #34c337;"></i>   
+                                </span>
+                              </div>
+                            </div>
+                            <div class=" me-2 " style="height:auto;">
+                                <div class="d-flex">
+                                    <p class="m-0 pe-1" style="min-width: 75px;">مانده :</p>
+                                    <span id="mandeh" class="me-2"></span>
+                                    <span class="me-2 toman2" id="v-mandeh"></span>
+                                </div>
+                                <div id="card-bdehcar">
+                                    <span style="min-width: 75px;">بدهکار :</span>
+                                    <span style=" color: #f00101ee;" id="num-bedehkar"></span>
+                                    <span id="vahed-bedehkar"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coontiner m-auto px-4">
+                        <div class="d-flex justify-content-center m-auto " id="table">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>تاریخ</th>
+                                        <th>وزن گل (کیلوگرم)</th>
+                                        <th> قیمت هر من (تومان)</th>
+                                        <th>مبلغ نهایی (تومان)</th>
+                                        <th style="width:30px;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                    <div class="" id="box-alert">
+                                        <p id="danjer">هشدار</p>
+                                        <p>آیا از حذف اطلاعات ثبت شده</p>
+                                        <div class="transition-alert">
+                                            <p> در تاریخ : <span id="alert-time"></span></p>
+                                            <p> با وزن :<span id="alert-vazn"></span></p>
+                                            <p> و مبلغ :<span id="alert-mablagh"></span></p>
+                                            <p> از فاکتور آقای :<span id="alert-name"></span></p>
+                                            <p>مطمئن هستید ؟؟</p>
+                                            <div class="d-flex justify-content-evenly">
+                                                <button class="btnn btn-yes" style="width: 90px;">بله</button>
+                                                <button id="btn-No" class="btnn" style="width: 90px;">خیر</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </tbody>
+                                <tfoot>
+                                    <tr class="bg-tr">
+                                        <td> </td>
+                                        <td id="total-vazn"></td>
+                                        <td> </td>
+                                        <td id="total-nahay"> </td>
+                                        <td style="width:30px;"></td>
+                                        
+                                       
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="print d-flex justify-content-center">
+                        <button id="print" class="btnn m-1" title="print">
+                            <i class="fa-solid fa-print" style="color: #b68ba2;"></i>
+                            <span class="m-2">چاپ</span>
+                        </button>
+                        <button id="close-print" class="btnn m-1">
+                            <i class="fa-solid fa-rotate-left" style="color: #b68ba2;"></i>
+                            <span class="m-2">بازگشت</span>
+                        </button>
+
+                    </div>
                 </div>
+
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="money-card">
+                                <form action="#">
+                                    <div class="card-Money">
+                                        <div class=" d-flex flex-column">
+                                            <ul class="heder-card-Money d-flex">
+                                                <li id="naghdy-heder">
+                                                    <div class="m-2 mb-0 pb-0 px-1 py-1">
+                                                        <button type="reset" class="btn-close-Icon">
+                                                            <span>نقدی</span>
+                                                        </button>
+                                                        <div id="naghdy-heder-down" class="bottom mt-2"></div>
+                                                    </div>
+                                                </li>
+                                                <li id="check-heder">
+                                                    <div class="m-2 mb-0 pb-0 px-1 py-1">
+                                                        <button type="reset" class="btn-close-Icon">
+                                                            <span>چک </span>
+                                                        </button>
+                                                        <div id="check-heder-down" class="bottom mt-2"></div>
+                                                    </div>
+                                                </li>
+                                                <li id="zaferan-heder">
+                                                    <div class="m-2 mb-0 pb-0 px-1 py-1">
+                                                        <button type="reset" class="btn-close-Icon">
+                                                            <span>زعفران (ریشه)</span>
+
+                                                        </button>
+                                                        <div id="zaferan-heder-down" class="bottom mt-2"></div>
+                                                    </div>
+                                                </li>
+                                                <div class="Icon-close" data-bs-dismiss="modal">
+                                                    <button type="reset" class="btn-close-Icon">
+
+                                                        <i class="fa-solid fa-xmark" id="fa-xmark" title="بستن"
+                                                            ></i>
+                                                    </button>
+                                                </div>
+                                            </ul>
+                                            <ul class="body-card-Money">
+                                                <li id="Body-naghdi" class="disply">
+
+                                                    <div class="card-naghdi">
+                                                        <div class="card-Money-date">
+                                                            <div class="">
+                                                                <span style="font-size:14px ;">تاریخ :</span>
+                                                                <span class="date-money" id="tarihk-naghdi"></span>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="mb-1">
+                                                            <span>مبلغ پرداختی :</span>
+
+                                                            <input type="text" id="naghdi22" class=" naghdi "
+                                                                placeholder="نداده عدد 0 بزنید"
+                                                                onkeyup="javascript:this.value=itpro(this.value);" />
+                                                            <span class="toman" id="naghdi-vahed"></span>
+                                                            
+                                                        </div>
+
+
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" name="" class="checkBox"
+                                                                id="checkbox">
+                                                            <span>واریز به کارت</span>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" name="" class="checkBox"
+                                                                id="checkbox2">
+                                                            <span> کارتخوان </span>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" name="" class="checkBox"
+                                                                id="checkbox3">
+                                                            <span> نقدی (پول) </span>
+                                                        </div>
+
+                                                        <div class="d-flex flex-column mt-1">
+                                                            <label for="taxtarea">توضیحات </label>
+                                                            <textarea name="taxtarea" class="taxtarea p-1 pe-2"
+                                                                id="taxtarea-naghdi" cols="10" rows="2"></textarea>
+                                                        </div>
+                                                        <div class="btn-taid">
+                                                            <button type="reset" class="btn-success"
+                                                                id="btn-taid-naghdi">
+                                                                تایید
+                                                                <!-- <span class="btn-success" id="btn-taid-naghdi">تایید</span> -->
+                                                            </button>
+                                                        </div>
+
+                                                    </div>
+                                                </li>
+                                                <li id="Body-check" class="">
+                                                    <div class="card-check">
+                                                        <div class="card-Money-date">
+                                                            <div class="">
+                                                                <span style="font-size:14px ;">تاریخ :</span>
+                                                                <span class="date-money" id="tarihk-check"></span>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="date-check">
+                                                            <span>تاریخ سر رسید چک :</span>
+                                                            <div class="d-flex" id="tarihk-shamsy4">
+                                                                <i class="fa-regular fa-calendar-plus"></i>
+                                                                <input type="text" name="time" id="tarihk-shamsy2"
+                                                                    placeholder="کلیک کنید...">
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="mb-1">
+                                                            <span>مبلغ چک :</span>
+                                                            <input type="text" id="naghdi-check" class=" naghdi "
+                                                                onkeyup="javascript:this.value=itpro(this.value);"
+                                                                onkeyup="javascript:this.value=VahedghabzCheck(this.value);" />
+                                                            <span class="" id="naghdi-check-vahed"></span>
+                                                            
+                                                        </div>
+
+                                                        <div class="d-flex flex-column mt-1">
+                                                            <label for="taxtarea">توضیحات </label>
+                                                            <textarea name="taxtarea" class="taxtarea p-1 pe-2"
+                                                                id="taxtarea-check" cols="10" rows="2"></textarea>
+                                                        </div>
+                                                        <div class="btn-taid">
+                                                            <span class="btn-success" id="btn-taid-check">تایید</span>
+                                                        </div>
+
+                                                    </div>
+                                                </li>
+                                                <li id="Body-zaferan" class="disply">
+                                                    <div class="card-check">
+                                                        <div class="card-Money-date">
+                                                            <div class="">
+                                                                <span style="font-size:14px ;">تاریخ :</span>
+                                                                <span class="date-money" id="tarihk-zaferan"></span>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="mb-1">
+                                                            <span> مقدار دریافتی زعفران :</span>
+                                                            <input type="number" name="" id="kelo">
+                                                            <span>کیلو و </span>
+                                                            <input type="number" name="" id="gram">
+                                                            <span> گرم</span>
+                                                        </div>
+                                                        <div class="date-check">
+                                                            <span> قیمت یک کیلو زعفران :</span>
+                                                            <input type="text" id="naghdi-zaferan" class=" naghdi "
+                                                                onkeyup="javascript:this.value=itpro(this.value);" />
+                                                            <span class="" id="naghdi-zaferan-vahed"></span>
+                                                            
+                                                        </div>
+                                                        <div class="">
+                                                            <span>مبلغ کل :</span>
+                                                            <span id="total-zaferan"></span>
+                                                            <span id="vahed-zaferan"></span>
+                                                            
+                                                        </div>
+                                                        <div class="d-flex flex-column mt-1">
+                                                            <label for="taxtarea">توضیحات </label>
+                                                            <textarea name="taxtarea" class="taxtarea p-1 pe-2"
+                                                                id="taxtarea-zaferan" cols="10" rows="2"></textarea>
+                                                        </div>
+                                                        <div class="btn-taid">
+                                                            <span class="btn-success" id="btn-taid-zaferan"
+                                                                >تایید</span>
+                                                        </div>
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
+        </section>
+        <section id="section3">
+            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-joz-zamin">
+                Launch static backdrop modal
+              </button> -->
+            
 
-        </div>
-        <div class="col-8 border shadow" style="height: 100vh;" >
-            <div class="d-flex justify-content-center border-bottom" style="height: 35px;">
-                <p class="m-auto">فاکتور فروش</p>
-            </div>
-            <div id="factor" class="d-flex justify-content-evenly border-bottom " style="height: 120px;">
-                <div class="d-block border-start " style="width: 350px;">
-                    <div class="d-flex m-2 border-bottom "  style="height: 30px; ;">
-                        <p>نام خریدار :</p>
-                        <span id="namekharidar"  class="me-1"> </span>
-                    </div>
-                    <div class="d-flex m-2 border-bottom "  style="height: 30px; ;">
-                        <p>شماره تلفن :</p>
-                        <span id="Number-phone"  class="me-1"> </span>
-                    </div>
-                    <div class="d-flex m-2  "  style="height: 30px; ;">
-                        <p>آدرس :</p>
-                        <span id="Adress"  class="me-1"> </span>
-                    </div>
-                </div>
-                <div class="d-block " style="width: 350px;">
-                    <div class="d-flex m-2 border-bottom " style="height: 30px; ;">
-                        <p class="ms-3">کل فروش :</p>
-                        <span id="kol-frosh" class="me-1">000000</span>
-                        <span class="me-1">میلیون تومان </span>
-                    </div>
-                    <div class="d-flex m-2 border-bottom " style="height: 30px; ;">
-                        <p class="ms-2">کل دریافتی :</p>
-                        <span id="daryafti" class="me-1">000000</span>
-                        <span class="me-1">میلیون تومان </span>
-                    </div>
-                    <div class="d-flex m-2  " style="height: 30px; ;">
-                        <p>مانده (قبض ) :</p>
-                        <span id="mandeh" class="me-1">000000</span>
-                        <span class="me-1">میلیون تومان </span>
-                    </div>
-                </div>
-            </div>
-        <div class="coontiner m-auto px-4">
-        <div class="d-flex justify-content-center m-auto " id="table">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>تاریخ</th>
-                        <th>وزن گل</th>
-                        <th> قیمت هر من</th>
-                        <th>مبلغ نهایی</th>
-                        <th>پرداخت شده</th>
-                        <th>مانده(قبض)</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
-                   
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td> </td>
-                        <td id="total-vazn"></td>
-                        <td> </td>
-                        <td id="total-nahay"> </td>
-                        <td id="total-pardakht"></td>
-                        <td id="total-mande"></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    </div>
-    </div>
-    <!-- ------------------------------------ -->
-    <script src="./jquery.js"></script>
-    <script src="./persianDate/kamadatepicker.min.js"></script>
-    <script src="./app1.js"></script>
-    <script src="./bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
-    <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./fontawesome-free-6.2.1-web/js/all.min.js"></script>
-    <script>
-        let options ={
-            placeholder : 'لطفا تاریخ را مشخص کنید', 
-            nextButtonIcon : './img/timeir_next.png',
-            previousButtonIcon :'./img/timeir_prev.png' ,
-            markToday : true ,
+        </section>
+        <section id="section4">  
+        </section>
 
-        }
-        kamaDatepicker('tarihk-shamsy' , options)
-    </script>
-    <script>
-        var mynumber = 2536584;
+    
 
-// نمایش در div
-// $("#p").html(mynumber.toLocaleString("en"));
+    
 
-//نمایش در input
-// $("#vazngol").val(mynumber.toLocaleString("en"));
-//     </script>
-   
+     <!-- ------------------------------------ -->
+     <script src="./NumToPersian-master/dist/num2persian-min.js"></script>
+     <script src="./sweet alert 2/sweetalert2.js"></script>
+     <script src="./jquery.js"></script>
+     <script src="./persianDate/kamadatepicker.min.js"></script>
+     <script src="./folder-js/app1.js"></script>
+     <script src="./folder-js/navbar.js"></script>
+     <script src="./folder-js/joziyat-pardacht.js"></script>
+     <script src="./folder-js/app.js"></script>
+     <script src="./folder-js/section1.js"></script>
+     <script src="./bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+     <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+     <script src="./font/fontawesome-free-6.2.1-web/js/all.min.js"></script>
+     <script>
+         let options = {
+             placeholder: 'لطفا تاریخ را مشخص کنید',
+             nextButtonIcon: false,
+             previousButtonIcon: false,
+             markToday: true,
+
+         }
+         kamaDatepicker('tarihk-shamsy', options)
+         kamaDatepicker('tarihk-shamsy2', options)
+         kamaDatepicker('tarihk-shamsy3', options)
+         kamaDatepicker('tarihk-shamsy44', options)
+     </script>
 
 </body>
 
